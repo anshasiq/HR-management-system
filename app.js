@@ -33,6 +33,7 @@ min =1500 ; max =2000;}
 for (let i=0;i<all_employee.length;++i){
     all_employee[i].ransalary();
 }
+
 for (let i=0;i<all_employee.length;++i){
     document.write(`<h1>the name is ${all_employee[i].Full_Name}</h1><h2>Salary ${all_employee[i].Salary}</h2>`);
 }

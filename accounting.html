@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>accounting</title>
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border: spacing 4px;;}
+        .tg td{border-color:black;border-style:solid;border-width:4px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+        .tg .tg-jq7l{background-color:#ecf4ff;border-color:inherit;text-align:center;vertical-align:middle}
+        .tg .tg-crli{border-color:inherit;font-size:22px;font-weight:bold;text-align:center;vertical-align:middle}
+        .tg .tg-p3rh{border-color:inherit;font-size:28px;text-align:left;vertical-align:middle}
+        </style>
 </head>
 <body>
     <header>
@@ -17,8 +28,48 @@
         </nav>
     </header>
     <main>
-
-
+        <table class="tg">
+            <thead>
+              <tr>
+                <th class="tg-crli">Department</th>
+                <th class="tg-crli">Number of employees</th>
+                <th class="tg-crli">Average Salary</th>
+                <th class="tg-crli">Total Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-p3rh">Administration</td>
+                <td id="a0" class="tg-jq7l"></td>
+                <td  id="avgsal0" class="tg-jq7l"></td>
+                <td  id="t0"class="tg-jq7l"></td>
+              </tr>
+              <tr>
+                <td class="tg-p3rh">Development</td>
+                <td id="a1" class="tg-jq7l"></td>
+                <td id="avgsal1" class="tg-jq7l"></td>
+                <td id="t1" class="tg-jq7l"></td>
+              </tr>
+              <tr>
+                <td class="tg-p3rh">Marketing</td>
+                <td id="a2" class="tg-jq7l"></td>
+                <td id="avgsal2" class="tg-jq7l"></td>
+                <td id="t2" class="tg-jq7l"></td>
+              </tr>
+              <tr>
+                <td class="tg-p3rh">Finance</td>
+                <td id="a3" class="tg-jq7l"></td>
+                <td id="avgsal3" class="tg-jq7l"></td>
+                <td id="t3" class="tg-jq7l"></td>
+              </tr>
+              <tr>
+                <td class="tg-lboi">Total</td>
+                <td id="toemp" class="tg-jq7l"></td>
+                <td id="toavgsal" class="tg-jq7l"></td>
+                <td id="t4" class="tg-jq7l"></td>
+              </tr>
+            </tbody>
+            </table>
     </main>
     <footer>
 
@@ -27,5 +78,6 @@
         </p>
 
     </footer>
+    <script src="./account.js"> </script>
 </body>
 </html>
