@@ -1,10 +1,7 @@
 let all_employee =[];
-function employee (employee_ID, full_Name, department, level,image_URL,salary)      {
-    this.employee_ID = employee_ID;
-    this.full_Name = full_Name;
+function employee (department, level,salary)      {
     this.department = department;
     this.level = level;
-    this.image_URL = image_URL;
     this.salary=salary;
     all_employee.push(this);
     
@@ -16,21 +13,11 @@ function getdata (){
     let objArr = JSON.parse(get);
 //  console.log(objArr);
 for (let i = 0; i < objArr.length; i++){
-    new employee (objArr[i].employee_ID, objArr[i].full_Name, objArr[i].department, objArr[i].level,
-        objArr[i].image_URL,objArr[i].salary);
+    new employee (objArr[i].department, objArr[i].level,objArr[i].salary);
            }}
            getdata ();
 /////////////////
 
-    for (let i=0 ; i<all_employee.length;++i){
-        if(all_employee[i].level=="Junior")
-        all_employee[i].salary= ((Math.random() * (1000-500) + 500)*(1-.075));
-        if(all_employee[i].level=="Mid-Senior")
-        all_employee[i].salary= ((Math.random() * (1500-1000) + 1000)*(1-.075));
-        if(all_employee[i].level=="Senior")
-        all_employee[i].salary= ((Math.random() * (2000-1500) + 1500)*(1-.075));
-      
-}
 
 
 //////////////
@@ -45,14 +32,14 @@ let a = new Array(4); for (let i=0; i<4; ++i) a[i] = 0;
         else if (all_employee[i].department=="Finance") ++a[3];
     }
 // }
-let y=document.getElementById("a0");
-  y.textContent=a[0];
-  let ay=document.getElementById("a1");
-  ay.textContent=a[1];
-  let aay=document.getElementById("a2");
-  aay.textContent=a[2];
-  let aaay=document.getElementById("a3");
-  aaay.textContent=a[3];
+let AdminEmp=document.getElementById("a0");
+AdminEmp.textContent=a[0];
+  let DevelopmentEmp=document.getElementById("a1");
+  DevelopmentEmp.textContent=a[1];
+  let MarketingEmp=document.getElementById("a2");
+  MarketingEmp.textContent=a[2];
+  let FinanceEmp=document.getElementById("a3");
+  FinanceEmp.textContent=a[3];
     
   let sum = a.reduce(function(a, b){
     return a + b;
@@ -91,18 +78,17 @@ let y=document.getElementById("a0");
     }
     let avgsal3 = document.getElementById("avgsal3");
     avgsal3.textContent=avgsal_3/a[3];
-    let toavgsal = document.getElementById("toavgsal");
-    toavgsal.textContent=(avgsal_3/a[3])
-    +(avgsal_2/a[2])+(avgsal_1/a[1])+(avgsal_0/a[0]);
+    let totalavgsal = document.getElementById("toavgsal");
+    totalavgsal.textContent=(avgsal_3/a[3])+(avgsal_2/a[2])+(avgsal_1/a[1])+(avgsal_0/a[0]);
     
-    let t0 = document.getElementById("t0");
-t0.textContent=(avgsal_0);
-let t1 = document.getElementById("t1");
-t1.textContent=(avgsal_1);
-let t2 = document.getElementById("t2");
-t2.textContent=(avgsal_2);
-let t3 = document.getElementById("t3");
-t3.textContent=(avgsal_3);
+    let totalAdmin = document.getElementById("t0");
+    totalAdmin.textContent=(avgsal_0);
+let totalDev = document.getElementById("t1");
+totalDev.textContent=(avgsal_1);
+let totalMarketing = document.getElementById("t2");
+totalMarketing.textContent=(avgsal_2);
+let totalFinance = document.getElementById("t3");
+totalFinance.textContent=(avgsal_3);
 
-let t4 = document.getElementById("t4");
-t4.textContent=(avgsal_3+avgsal_2+avgsal_1+avgsal_0);
+let totalSalaries = document.getElementById("t4");
+totalSalaries.textContent=(avgsal_3+avgsal_2+avgsal_1+avgsal_0);
